@@ -1,1 +1,2 @@
-backend : python + fast api (sau này tích hợp ML/security tools)
+# backend  
+python + fast api (sau này tích hợp ML/security tools)
