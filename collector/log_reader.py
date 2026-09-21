@@ -1,4 +1,4 @@
-from pathlib import Path
+from pathlib import Path 
 def read_logs(file_path: str):
     path = Path(file_path)
     if not path.exists():
@@ -7,6 +7,6 @@ def read_logs(file_path: str):
         for line in file:
             line = line.strip()
             if line:
-                yield line  
+                yield line #yield dung de doc 1 dong , roi xu ly sau do lai doc dong tiep roi lai xu ly , qua trinh lap lai.
 
 
