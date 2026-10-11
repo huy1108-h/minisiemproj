@@ -9,14 +9,17 @@ class Event(Base):
 
     id = Column(Integer, primary_key=True, index=True)
 
+    fingerprint = Column(
+        String(64),
+        unique=True,
+        nullable=False,
+        index=True
+    )
+
     timestamp = Column(DateTime, nullable=False)
-
     level = Column(String(20), nullable=False)
-
     user = Column(String(100), nullable=True)
-
     action = Column(String(100), nullable=False)
-
     ip = Column(String(45), nullable=True)
 
     created_at = Column(
@@ -43,3 +46,4 @@ class Alert(Base):
         DateTime(timezone=True),
         server_default=func.now()
     )
+
